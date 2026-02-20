@@ -9,6 +9,11 @@ repo github: github.com/mapleduck/log430-labo4
 
 Compte tenu d'une panne tepmoraire du reseau de l'ecole, jai acocmpli les performance tests localement.
 
+First try on locust run = hard sql crash.
+
+
+Aussi jai modifie le mauvais ifhciermaaaan
+
 
 ## Déploiement
 

@@ -19,6 +19,11 @@ counter_orders = Counter('orders_total', 'Total calls to /orders')
 counter_highest_spenders = Counter('highest_spenders_reports_total', 'Total calls to /orders/reports/highest-spenders')
 counter_best_sellers = Counter('best_sellers_reports_total', 'Total calls to /orders/reports/best-sellers')
 
+def generate_reports_and_cache():
+    threading.Timer(2.0, get_report_highest_spending_users, args=(True,)).start()
+    threading.Timer(2.0, get_report_best_selling_products, args=(True,)).start()
+    threading.Timer(60.0, generate_reports_and_cache).start()
+
 @app.get('/health-check')
 def health():
     """Return OK if app is up and running"""
@@ -119,4 +124,5 @@ def metrics():
 
 # Start Flask app
 if __name__ == '__main__':
+    generate_reports_and_cache()
     app.run(host='0.0.0.0', port=5000)
