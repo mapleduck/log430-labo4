@@ -7,12 +7,8 @@ repo github: github.com/mapleduck/log430-labo4
 
 ## Questions
 
-Compte tenu d'une panne tepmoraire du reseau de l'ecole, jai acocmpli les performance tests localement.
-
-First try on locust run = hard sql crash.
-
-
-Aussi jai modifie le mauvais ifhciermaaaan
+Notes préalabes:
+1. Des problèmes avec le VPN Cisco sur ma machine Ubuntu m'ont requis de faire ce lab sans accès à ma VM, donc store_manager et les autres containers furent uniquement roulé localement.
 
 
 ## Déploiement
